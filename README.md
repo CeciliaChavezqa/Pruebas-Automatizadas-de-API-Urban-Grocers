@@ -53,6 +53,52 @@ El archivo principal y los archivos de soporte deben seguir esta lógica:
 
 ---
 
+## 🚀 Guía de Ejecución y Flujo de Trabajo
+
+Sigue estas instrucciones detalladas para configurar el entorno, comprender la arquitectura del código y ejecutar la suite de pruebas automatizadas.
+
+### 📌 Especificaciones del Entorno (Versiones Utilizadas)
+Para asegurar la compatibilidad y evitar errores de ejecución, este proyecto utiliza de manera estricta las siguientes tecnologías:
+* **Python:** v3.14 (Entorno virtual `.venv` configurado)
+* **pytest:** v7.4.x
+* **requests:** v2.31.x
+* **IDE Recomendado:** PyCharm
+
+---
+
+### 🛠️ Flujo de Trabajo del Equipo: ¿Cómo añadir y definir una nueva prueba?
+
+Para mantener la consistencia y el orden del framework, cualquier miembro del equipo que necesite automatizar un nuevo caso de la lista de comprobación debe seguir obligatoriamente este flujo de 2 pasos:
+
+#### Paso 1: Declarar el valor de la prueba en `data.py`
+No se deben usar valores estáticos (*hardcoded*) dentro de las pruebas. Primero, abre el archivo `data.py` y declara la variable con la cadena o el tipo de dato exacto que vas a evaluar en el cuerpo de la solicitud (`kit_body`).
+* *Ejemplo en `data.py`:*
+    ```python
+    Numero_caracteres_min_permitido = "a"
+    Caracteres_especiales = "№%@"
+    ```
+
+#### Paso 2: Definir y programar la prueba en `create_kit_name_test.py`
+Una vez declarada la variable de datos, dirígete a `create_kit_name_test.py` para construir la lógica de tu caso de prueba:
+1.  Genera el cuerpo del kit dinámicamente llamando a la función auxiliar `get_kit_body()` y pasándole como argumento la variable que creaste en el paso anterior (`data.Numero_caracteres_min_permitido`).
+2.  Utiliza las funciones de aserción predefinidas (`possitive_assert` para esperar un código de estado `201` o `negative_assert` para un código `400`) para evaluar el resultado de forma limpia.
+* *Ejemplo de estructura en `create_kit_name_test.py`:*
+    ```python
+    def test_1_nombre_del_kit_con_1_caracter():
+        current_kit_body = get_kit_body(data.Numero_caracteres_min_permitido)
+        possitive_assert(current_kit_body)
+    ```
+
+---
+
+### 🏃‍♂️ Pasos para Ejecutar el Proyecto desde Cero
+
+#### Paso 1: Clonar el Repositorio
+Abre tu terminal (Git Bash o la terminal integrada de PyCharm) y clona el proyecto en tu máquina local:
+```bash
+git clone git@github.com:tu_usuario/qa-project-Urban-Grocers-app-es.git
+cd qa-project-Urban-Grocers-app-es
+
 ## 🚀 Ejecución
 
 Para correr las pruebas, sigue estos pasos:

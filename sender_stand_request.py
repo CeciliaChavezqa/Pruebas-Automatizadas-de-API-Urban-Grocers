@@ -9,6 +9,7 @@ def post_new_user(body):
 
 # Para  revisar que todo en el post new user name esta ok = 201
 response = post_new_user(data.user_body)
+
 #print(response.status_code)
 # Para obtener authToken
 #print(response.json())
