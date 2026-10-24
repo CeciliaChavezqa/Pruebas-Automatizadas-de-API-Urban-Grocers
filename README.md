@@ -107,7 +107,8 @@ Para correr las pruebas, sigue estos pasos:
 2.  **Actualiza la URL** en el archivo `configuration.py` si es necesario.
 3.  **Ejecuta las pruebas** desde la terminal de PyCharm o Git Bash usando el comando:
     ```bash
-  
+    pytest create_kit_test.py
+    ```
 
 ## 🧪 Casos de Prueba Cubiertos
 
