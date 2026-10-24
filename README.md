@@ -124,4 +124,5 @@ Se automatizaron 9 casos de prueba basados en la lista de comprobación:
 9. Tipo de parámetro incorrecto (número en lugar de string).
  
 👤 Autor
+
 Cecilia Mena Chavez | Ingeniera en Tecnología Automotriz | QA Engineer "Transformando la precisión técnica en software confiable."
