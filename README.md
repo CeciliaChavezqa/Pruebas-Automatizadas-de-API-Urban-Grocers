@@ -95,7 +95,7 @@ Una vez declarada la variable de datos, dirígete a `create_kit_name_test.py` pa
 
 #### Paso 1: Clonar el Repositorio
 Abre tu terminal (Git Bash o la terminal integrada de PyCharm) y clona el proyecto en tu máquina local:
-```bash
+bash
 git clone git@github.com:tu_usuario/qa-project-Urban-Grocers-app-es.git
 cd qa-project-Urban-Grocers-app-es
 
@@ -107,10 +107,7 @@ Para correr las pruebas, sigue estos pasos:
 2.  **Actualiza la URL** en el archivo `configuration.py` si es necesario.
 3.  **Ejecuta las pruebas** desde la terminal de PyCharm o Git Bash usando el comando:
     ```bash
-    pytest create_kit_test.py
-    ```
-
----
+  
 
 ## 🧪 Casos de Prueba Cubiertos
 
@@ -124,3 +121,4 @@ Se automatizaron 9 casos de prueba basados en la lista de comprobación:
 7. Uso de números como cadena de texto.
 8. Parámetro `name` ausente en la solicitud.
 9. Tipo de parámetro incorrecto (número en lugar de string).
+ 
